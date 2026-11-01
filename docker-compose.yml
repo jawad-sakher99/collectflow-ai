@@ -7,5 +7,11 @@ services:
      - "5432:5432"
     volumes:
      - pgdata:/var/lib/postgresql/data
+
+  mock-erp:
+    build: ./mock-erp
+    ports:
+      - "8001:8000"
+    
 volumes:
   pgdata:
